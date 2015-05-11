@@ -1,0 +1,30 @@
+//------------------------------
+//  Mixins
+//------------------------------
+
+@mixin clearfix {
+  &:after {
+    clear: both; 
+    content: ' ';
+    display: table;
+  }
+}
+
+//------------------------------
+//  Breakpoints
+//------------------------------
+
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (max-width: 1023px) { @content; }
+  }
+  @if $point == mobile {
+    @media (max-width: 767px) { @content; }
+  }
+  @if $point == s-mobile {
+    @media (max-width: 479px) { @content; }
+  }
+  @if $point == $point {
+    @media (max-width: $point) { @content; }
+  }
+}
