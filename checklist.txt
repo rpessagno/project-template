@@ -1,6 +1,9 @@
 Rosetta Project Template Checklist
 ----------------------------------
 
+Project Template
+https://github.com/rpessagno/rosetta-project-template
+
 Node.js
 https://nodejs.org/
 
@@ -40,17 +43,14 @@ Install Packages:
 - SublimeLinter-contrib-scss-lint
   - npm install -g csslint
 
-Copy items from project template
-- gulpfile.js
-- src
-- package.json
-- .gitignore
-
-Create an empty "target" folder
-
-npm install
-
 Install LiveReload Browser Plugin
 http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
 
 Git
+    git init
+    git add .
+    git commit -m "first commit"
+
+Gulp
+    npm install
+    gulp
