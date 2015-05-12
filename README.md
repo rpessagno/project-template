@@ -1,13 +1,10 @@
-#Rosetta Project Template Checklist
-----
+#Rosetta Project Template
 
-[Node.js](https://nodejs.org/)
+[Node.js](https://nodejs.org/ target="_blank")
 
 [RVM](https://rvm.io/)
 
-[Ruby](https://www.ruby-lang.org/en/)
-
-- version 2.1.1
+[Ruby](https://www.ruby-lang.org/en/) (version 2.1.1)
 
 [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 
@@ -21,7 +18,7 @@
 
 [SublimeText](http://www.sublimetext.com/3)
 
-- Install Packages:
+SublimeText Packages
     - [Package Control](https://packagecontrol.io/installation)
     - Emmet
     - Emmet Css Snippets
