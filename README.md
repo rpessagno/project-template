@@ -1,11 +1,7 @@
 Rosetta Project Template Checklist
 ----------------------------------
 
-Project Template
-https://github.com/rpessagno/rosetta-project-template
-
-Node.js
-https://nodejs.org/
+[Node.js](https://nodejs.org/)
 
 RVM
 https://rvm.io/
