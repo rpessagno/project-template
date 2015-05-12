@@ -18,25 +18,20 @@
 
 [SublimeText](http://www.sublimetext.com/3)
 
-SublimeText Packages
-
-- [Package Control](https://packagecontrol.io/installation)
-- Emmet
-- Emmet Css Snippets
-- jQuery
-- jQuery Snippets pack
-- JSLint
-- SublimeLinter
-- SCSS
-- SublimeLinter-contrib-scss-lint
-
-```
-npm install -g csslint
-```
+- Install [Package Control](https://packagecontrol.io/installation)
+- Install Sublime Packages:
+    - Emmet
+    - Emmet Css Snippets
+    - jQuery
+    - jQuery Snippets pack
+    - JSLint
+    - SublimeLinter
+    - SCSS
+    - SublimeLinter-contrib-scss-lint
 
 [LiveReload Browser Plugin](http://livereload.com/extensions/)
 
-Git
+[Git](http://www.git-scm.com/)
 
 ```
 git init
@@ -44,9 +39,15 @@ git add .
 git commit -m "first commit"
 ```
 
-Gulp
+[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
+Install Gulp plugins via package.json file:
 
 ```
 npm install
+```
+
+Run Gulp
+```
 gulp
 ```
