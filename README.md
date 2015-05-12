@@ -1,52 +1,51 @@
-Rosetta Project Template Checklist
-----------------------------------
+#Rosetta Project Template Checklist
+----
 
 [Node.js](https://nodejs.org/)
 
-RVM
-https://rvm.io/
+[RVM](https://rvm.io/)
 
-Ruby
-https://www.ruby-lang.org/en/
-version 2.1.1
+[Ruby](https://www.ruby-lang.org/en/)
 
-Xcode
-https://itunes.apple.com/us/app/xcode/id497799835?mt=12
+- version 2.1.1
 
-Homebrew
-http://brew.sh/
+[Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 
-NPM
-https://docs.npmjs.com/getting-started/installing-node
+[Homebrew](http://brew.sh/)
 
-Sass
-http://sass-lang.com/install
+[NPM](https://docs.npmjs.com/getting-started/installing-node)
 
-MAMP
-https://www.mamp.info/en/downloads/
+[Sass](http://sass-lang.com/install)
 
-SublimeText
-http://www.sublimetext.com/3
-Install Packages:
-- Package Control
-- Emmet
-- Emmet Css Snippets
-- jQuery
-- jQuery Snippets pack
-- JSLint
-- SublimeLinter
-- SCSS
-- SublimeLinter-contrib-scss-lint
-  - npm install -g csslint
+[MAMP](https://www.mamp.info/en/downloads/)
 
-Install LiveReload Browser Plugin
-http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-
+[SublimeText](http://www.sublimetext.com/3)
+
+- Install Packages:
+    - [Package Control](https://packagecontrol.io/installation)
+    - Emmet
+    - Emmet Css Snippets
+    - jQuery
+    - jQuery Snippets pack
+    - JSLint
+    - SublimeLinter
+    - SCSS
+    - SublimeLinter-contrib-scss-lint
+```
+npm install -g csslint
+```
+
+[LiveReload Browser Plugin](http://livereload.com/extensions/)
 
 Git
-    git init
-    git add .
-    git commit -m "first commit"
+```
+git init
+git add .
+git commit -m "first commit"
+```
 
 Gulp
-    npm install
-    gulp
+```
+npm install
+gulp
+```
