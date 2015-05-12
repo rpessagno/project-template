@@ -1,6 +1,20 @@
-//------------------------------
-//  Variables
+//==============================
+// Variables
+//==============================
+
+
+// Colors
 //------------------------------
 
 $grey: #ccc;
 $selection: #b3d4fc;
+
+
+// Media Queries
+//------------------------------
+// Usage:
+// @media #{$bp-large}
+
+$bp-large   : '(max-width: 1023px)';
+$bp-medium  : '(max-width: 767px)';
+$bp-small   : '(max-width: 479px)';

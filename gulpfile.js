@@ -13,7 +13,9 @@ var gulp = require('gulp'),
 // CSS - SASS, autoprefixer, minify
 gulp.task('styles', function () {
   sass('src/assets/scss/main.scss', { style: 'expanded' })
-    .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 9'))
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions']
+    }))
     .pipe(minifycss())
     .pipe(gulp.dest('target/assets/css'))
     .pipe(livereload());
