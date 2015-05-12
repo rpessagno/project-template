@@ -1,6 +1,6 @@
 #Rosetta Project Template
 
-[Node.js](https://nodejs.org/ target="_blank")
+[Node.js](https://nodejs.org/)
 
 [RVM](https://rvm.io/)
 
@@ -19,15 +19,17 @@
 [SublimeText](http://www.sublimetext.com/3)
 
 SublimeText Packages
-    - [Package Control](https://packagecontrol.io/installation)
-    - Emmet
-    - Emmet Css Snippets
-    - jQuery
-    - jQuery Snippets pack
-    - JSLint
-    - SublimeLinter
-    - SCSS
-    - SublimeLinter-contrib-scss-lint
+
+- [Package Control](https://packagecontrol.io/installation)
+- Emmet
+- Emmet Css Snippets
+- jQuery
+- jQuery Snippets pack
+- JSLint
+- SublimeLinter
+- SCSS
+- SublimeLinter-contrib-scss-lint
+
 ```
 npm install -g csslint
 ```
@@ -35,6 +37,7 @@ npm install -g csslint
 [LiveReload Browser Plugin](http://livereload.com/extensions/)
 
 Git
+
 ```
 git init
 git add .
@@ -42,6 +45,7 @@ git commit -m "first commit"
 ```
 
 Gulp
+
 ```
 npm install
 gulp
