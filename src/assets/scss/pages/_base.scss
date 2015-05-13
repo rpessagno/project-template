@@ -1,3 +1,20 @@
 //==============================
 // Pages - Base
 //==============================
+
+.wrapper {
+  margin: 0 auto;
+  width: 1024px;
+
+  @include bp(l) {
+    width: 768px;
+  }
+
+  @include bp(m) {
+    width: 480px;
+  }
+  
+  @include bp(s) {
+    width: auto;
+  }
+}
