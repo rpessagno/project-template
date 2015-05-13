@@ -2,6 +2,10 @@
 // Global
 //==============================
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font: normal 16px/1.375em Helvetica, Arial, sans-serif;
