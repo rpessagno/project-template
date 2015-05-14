@@ -2,7 +2,7 @@
 
 - [Node.js](https://nodejs.org/)
 - [RVM](https://rvm.io/)
-- [Ruby](https://www.ruby-lang.org/en/) (version 2.1.1)
+- [Ruby](https://www.ruby-lang.org/en/)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
 - [NPM](https://docs.npmjs.com/getting-started/installing-node)
@@ -50,9 +50,9 @@ git add .
 git commit -m "first commit"
 ```
 
-###[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+##[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
-Install Gulp plugins via package.json file:
+Install Gulp plugins via package.json:
 
 ```
 npm install
