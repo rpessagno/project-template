@@ -25,11 +25,10 @@
 - SCSS
 - SublimeLinter-contrib-scss-lint
 
-###User Settings
+###Recommended User Settings
 
 ```
 {
-  "color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
   "font_size": 12,
   "ignored_packages":
   [
