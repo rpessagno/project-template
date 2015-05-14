@@ -9,6 +9,7 @@
 - [Sass](http://sass-lang.com/install)
 - [MAMP](https://www.mamp.info/en/downloads/)
 - [LiveReload Browser Plugin](http://livereload.com/extensions/)
+- [GitHub for Mac](https://mac.github.com/)
 
 ##[SublimeText](http://www.sublimetext.com/3)
 
@@ -48,8 +49,6 @@ git init
 git add .
 git commit -m "first commit"
 ```
-
-- [GitHub for Mac](https://mac.github.com/)
 
 ##[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
