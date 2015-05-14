@@ -25,7 +25,7 @@
 - SCSS
 - SublimeLinter-contrib-scss-lint
 
-###Recommended User Settings
+###Recommended Minimum Settings
 
 ```
 {
