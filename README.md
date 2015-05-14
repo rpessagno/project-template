@@ -16,18 +16,37 @@
 
 [MAMP](https://www.mamp.info/en/downloads/)
 
-[SublimeText](http://www.sublimetext.com/3)
+##[SublimeText](http://www.sublimetext.com/3)
 
 - Install [Package Control](https://packagecontrol.io/installation)
-- Install Sublime Packages:
-    - Emmet
-    - Emmet Css Snippets
-    - jQuery
-    - jQuery Snippets pack
-    - JSLint
-    - SublimeLinter
-    - SCSS
-    - SublimeLinter-contrib-scss-lint
+
+###Sublime Packages:
+
+- Emmet
+- Emmet Css Snippets
+- jQuery
+- jQuery Snippets pack
+- JSLint
+- SublimeLinter
+- SCSS
+- SublimeLinter-contrib-scss-lint
+
+###User Settings
+
+```
+{
+  "color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
+  "font_size": 12,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "word_wrap": true,
+  "wrap_width": 120
+}
+```
 
 [LiveReload Browser Plugin](http://livereload.com/extensions/)
 
