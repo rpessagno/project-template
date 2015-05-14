@@ -51,13 +51,14 @@ git commit -m "first commit"
 
 ##[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
-Install Gulp plugins via package.json:
+###Install Gulp plugins via package.json:
 
 ```
 npm install
 ```
 
-Run Gulp
+###Run Gulp
+
 ```
 gulp
 ```
