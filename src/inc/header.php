@@ -3,6 +3,8 @@
 <head>
 
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title>Page Title</title>
 <meta name="description" content="">
 <link rel="stylesheet" href="assets/css/main.css">
