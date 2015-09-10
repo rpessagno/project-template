@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  sass          = require('gulp-ruby-sass'),
+  sass          = require('gulp-sass'),
   autoprefixer  = require('gulp-autoprefixer'),
   minifycss     = require('gulp-minify-css'),
   jshint        = require('gulp-jshint'),
@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 
 // CSS - SASS, autoprefixer, minify
 gulp.task('styles', function () {
-  sass('src/assets/scss/main.scss', { style: 'expanded' })
+  gulp.src('src/assets/scss/main.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
@@ -74,6 +75,11 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('default', ['clean'], function () {
+gulp.task('dev', ['clean'], function () {
   gulp.start('styles', 'scripts', 'copyfiles', 'images', 'watch');
+});
+
+// Build task
+gulp.task('default', ['clean'], function () {
+  gulp.start('styles', 'scripts', 'copyfiles', 'images');
 });
