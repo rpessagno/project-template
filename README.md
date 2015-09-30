@@ -61,5 +61,5 @@ npm install
 ###Run Gulp
 
 ```
-gulp
+gulp dev
 ```
