@@ -1,21 +1,31 @@
 //==============================
-// Import Global
+// Main
 //==============================
+
+
+// Global
+//------------------------------
 
 @import 'global/mixins';
 @import 'global/variables';
 @import 'global/fonts';
 @import 'global/normalize';
 @import 'global/base';
+@import 'global/placeholders';
 
 
-// Import Modules
+// Modules
 //------------------------------
 
 @import 'modules/base';
 
 
-// Import Pages
+// Pages
 //------------------------------
 
 @import 'pages/base';
+
+
+// Print
+//------------------------------
+@import 'global/print';
