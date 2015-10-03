@@ -62,3 +62,16 @@ textarea {
   display: none;
   visibility: hidden;
 }
+
+a {
+  outline: none;
+
+  &:link,
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
+
