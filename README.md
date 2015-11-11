@@ -1,8 +1,6 @@
 #Rosetta Project Template
 
 - [Node.js](https://nodejs.org/)
-- [RVM](https://rvm.io/)
-- [Ruby](https://www.ruby-lang.org/en/)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
 - [NPM](https://docs.npmjs.com/getting-started/installing-node)
