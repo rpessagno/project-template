@@ -1,28 +1,30 @@
 var gulp = require('gulp'),
   sass          = require('gulp-sass'),
   autoprefixer  = require('gulp-autoprefixer'),
-  minifycss     = require('gulp-minify-css'),
+  cssnano       = require('gulp-cssnano'),
   jshint        = require('gulp-jshint'),
+  stylish       = require('jshint-stylish'),
   uglify        = require('gulp-uglify'),
   imagemin      = require('gulp-imagemin'),
   concat        = require('gulp-concat'),
   changed       = require('gulp-changed'),
   livereload    = require('gulp-livereload'),
   del           = require('del');
+  gulpsync      = require('gulp-sync')(gulp);
 
-// CSS - SASS, autoprefixer, minify
+// CSS
 gulp.task('styles', function () {
   gulp.src('src/assets/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
-    .pipe(minifycss())
+    .pipe(cssnano())
     .pipe(gulp.dest('target/assets/css'))
     .pipe(livereload());
 });
 
-// JS - JS hint, concat, minify
+// Scripts
 gulp.task('scripts', function () {
   gulp.src([
     './src/assets/js/lib/jquery.js',
@@ -32,12 +34,9 @@ gulp.task('scripts', function () {
     '!./src/assets/js/lib/modernizr.js',
     '!./src/assets/js/src/blank.js'
   ])
-    .pipe(jshint.reporter('jshint-summary', {
-      verbose: true,
-      reasonCol: 'blue,bold',
-      positionCol: 'grey',
-      statistics: true
-    }))
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish))
+    // .pipe(jshint.reporter('fail'))
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('target/assets/js'))
@@ -46,7 +45,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('target/assets/js'));
 });
 
-// Compress images
+// Images
 gulp.task('images', function () {
   gulp.src('src/assets/images/**/*')
     .pipe(imagemin())
@@ -75,11 +74,13 @@ gulp.task('watch', function () {
 });
 
 // Default task
-gulp.task('dev', ['clean'], function () {
-  gulp.start('styles', 'scripts', 'copyfiles', 'images', 'watch');
-});
+gulp.task('default', gulpsync.sync(['styles', 'scripts', 'copyfiles', 'images'], ['clean']));
 
-// Build task
-gulp.task('default', ['clean'], function () {
-  gulp.start('styles', 'scripts', 'copyfiles', 'images');
-});
+// Watch task
+gulp.task('dev', gulpsync.sync(['styles', 'scripts', 'copyfiles', 'images', 'watch'], ['clean']));
+
+// To Do
+/*
+- No linting on JS libs
+- Jade
+*/
