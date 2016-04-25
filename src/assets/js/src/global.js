@@ -4,6 +4,7 @@
 
 FastClick.attach(document.body);
 
+
 //$('.thing-with-videos').fitVids();
 
 // End Document Ready
