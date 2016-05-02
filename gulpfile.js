@@ -12,7 +12,8 @@ var gulp          = require('gulp'),
     concat        = require('gulp-concat'),
     changed       = require('gulp-changed'),
     livereload    = require('gulp-livereload'),
-    del           = require('del');
+    del           = require('del'),
+    jade          = require('gulp-jade');
 
 
 //----------------------------------------

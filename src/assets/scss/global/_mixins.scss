@@ -17,3 +17,19 @@
     @media only screen and (max-width: 479px) { @content; }
   }
 }
+
+
+// Font declaration
+@mixin font($font, $file, $weight, $style) {
+	@font-face {
+	  font-family: '#{$font}';
+	  src: url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot'),
+	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot?#iefix') format('embedded-opentype'),
+	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff2') format('woff2'),
+	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff') format('woff'),
+	    url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.ttf') format('truetype'),
+	    url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.svg##{$file}') format('svg');
+	  font-weight: $weight;
+	  font-style: $style;
+	}
+}
