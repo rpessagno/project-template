@@ -1,0 +1,80 @@
+//==============================
+// Form
+//==============================
+
+.form {
+  background: #f0f0f0;
+  padding: 1em;
+
+  &-field {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background-color: $white;
+  border: $grey solid 1px;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: currentColor;
+  display: block;
+  font: inherit;
+  line-height: 1;
+  padding: 0.5em;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-appearance: textfield;
+  width: 100%;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $black;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+input[type="checkbox"] + input[type="checkbox"],
+input[type="radio"] + input[type="radio"] {
+  margin-top: 0.5em;
+}
+
+input[type="submit"] {
+  background-color: $white;
+  border: $grey solid 1px;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: currentColor;
+  display: block;
+  font: inherit;
+  line-height: 1;
+  padding: 0.5em 1em;
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-appearance: textfield;
+
+  &:hover {
+    border-color: $black;
+  }
+}
+
+

@@ -4,20 +4,9 @@
 
 .wrapper {
   margin: 0 auto;
+  max-width: 1024px;
   padding: 0 20px 100px;
-  width: 1024px;
-
-  @include bp(l) {
-    width: 768px;
-  }
-
-  @include bp(m) {
-    width: 480px;
-  }
-  
-  @include bp(s) {
-    width: auto;
-  }
+  width: auto;
 }
 
 h1 {

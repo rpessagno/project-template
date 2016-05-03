@@ -27,6 +27,51 @@
     <li>Sunt laudantium, inventore. Labore sunt facere ab tenetur adipisci, unde. Consequatur dolorum est expedita adipisci atque sint labore dolor, cumque ratione unde doloribus aliquid pariatur fugit, ex eos harum incidunt.</li>
     <li>Quia quis magnam iste, quisquam itaque, possimus voluptate distinctio, ab cumque, sunt at! Reprehenderit facere harum inventore, illum earum minima doloremque voluptates ipsam ipsa nam? Excepturi odio cupiditate quia aut!</li>
   </ol>
+
+  <form class="form">
+    <div class="form-field">
+      <label>Input (text)</label>
+      <input type="text">
+    </div>
+    <div class="form-field">
+      <label>Input (password)</label>
+      <input type="password">
+    </div>
+    <div class="form-field">
+      <label>Input (email)</label>
+      <input type="email">
+    </div>
+    <div class="form-field">
+      <label>Input (tel)</label>
+      <input type="tel">
+    </div>
+    <div class="form-field">
+       <label>Text Area</label>
+      <textarea rows="5"></textarea>
+    </div>
+    <div class="form-field">
+      <label>Select</label>
+      <select required>
+        <option disabled selected>Please select one</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="checkbox1"><input type="checkbox" name="checkbox" value="value1" id="checkbox1">Checkbox 1</label>
+      <label for="checkbox2"><input type="checkbox" name="checkbox" value="value2" id="checkbox2">Checkbox 2</label>
+      <label for="checkbox3"><input type="checkbox" name="checkbox" value="value3" id="checkbox3">Checkbox 3</label>
+    </div>
+    <div class="form-field">
+      <label for="radio1"><input type="radio" name="radio" value="value1" id="radio1">Radio 1</label>
+      <label for="radio2"><input type="radio" name="radio" value="value2" id="radio2">Radio 2</label>
+      <label for="radio3"><input type="radio" name="radio" value="value3" id="radio3">Radio 3</label>
+    </div>
+    <div class="form-field">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
   
 </div>
 
