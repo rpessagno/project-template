@@ -2,22 +2,18 @@
 // Mixins
 //==============================
 
-
-// Media Queries
-//------------------------------
-
-@mixin bp($point) {
-  @if $point == l {
-    @media only screen and (max-width: 1023px) { @content; }
-  }
-  @else if $point == m {
-    @media only screen and (max-width: 767px) { @content; }
-  }
-  @else if $point == s {
-    @media only screen and (max-width: 479px) { @content; }
-  }
+// Breakpoints
+@mixin bp($bp) {
+	@if $bp == m {
+		@media only screen and (min-width: 480px) { @content; }
+	}
+	@else if $bp == l {
+	  @media only screen and (min-width: 768px) { @content; }
+	}
+	@else if $bp == xl {
+	  @media only screen and (min-width: 1024px) { @content; }
+	}
 }
-
 
 // Font declaration
 @mixin font($font, $file, $weight, $style) {
@@ -31,5 +27,22 @@
 	    url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.svg##{$file}') format('svg');
 	  font-weight: $weight;
 	  font-style: $style;
+	}
+}
+
+// Font sizes at all breakpoints
+@mixin font-size($s, $m, $l, $xl) {
+	font-size: $s;
+
+	@include bp(m) {
+		font-size: $m;
+	}
+
+	@include bp(l) {
+		font-size: $l;
+	}
+
+	@include bp(xl) {
+		font-size: $xl;
 	}
 }

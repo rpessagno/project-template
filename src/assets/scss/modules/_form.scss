@@ -3,7 +3,8 @@
 //==============================
 
 .form {
-  background: #f0f0f0;
+  background: $bg-grey-light;
+  border: $border-grey-light solid 1px;
   padding: 1em;
 
   &-field {
@@ -24,7 +25,7 @@ input[type="tel"],
 textarea,
 select {
   background-color: $white;
-  border: $grey solid 1px;
+  border: $border-grey-light solid 1px;
   border-radius: 0;
   box-sizing: border-box;
   box-shadow: none;
@@ -59,7 +60,7 @@ input[type="radio"] + input[type="radio"] {
 
 input[type="submit"] {
   background-color: $white;
-  border: $grey solid 1px;
+  border: $border-grey-light solid 1px;
   border-radius: 0;
   box-sizing: border-box;
   box-shadow: none;

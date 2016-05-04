@@ -1,19 +1,20 @@
 //----------------------------------------
 // Plugins
 //----------------------------------------
-var gulp          = require('gulp'),
-    sass          = require('gulp-sass'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    cssnano       = require('gulp-cssnano'),
-    jshint        = require('gulp-jshint'),
-    stylish       = require('jshint-stylish'),
-    uglify        = require('gulp-uglify'),
-    imagemin      = require('gulp-imagemin'),
-    concat        = require('gulp-concat'),
-    changed       = require('gulp-changed'),
-    livereload    = require('gulp-livereload'),
-    del           = require('del'),
-    jade          = require('gulp-jade');
+var
+  gulp          = require('gulp'),
+  sass          = require('gulp-sass'),
+  autoprefixer  = require('gulp-autoprefixer'),
+  cssnano       = require('gulp-cssnano'),
+  jshint        = require('gulp-jshint'),
+  stylish       = require('jshint-stylish'),
+  uglify        = require('gulp-uglify'),
+  imagemin      = require('gulp-imagemin'),
+  concat        = require('gulp-concat'),
+  changed       = require('gulp-changed'),
+  livereload    = require('gulp-livereload'),
+  del           = require('del'),
+  jade          = require('gulp-jade');
 
 
 //----------------------------------------
