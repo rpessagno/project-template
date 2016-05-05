@@ -1,6 +1,7 @@
 //----------------------------------------
 // Plugins
 //----------------------------------------
+
 var
   gulp          = require('gulp'),
   sass          = require('gulp-sass'),
@@ -12,14 +13,14 @@ var
   imagemin      = require('gulp-imagemin'),
   concat        = require('gulp-concat'),
   changed       = require('gulp-changed'),
-  livereload    = require('gulp-livereload'),
   del           = require('del'),
-  jade          = require('gulp-jade');
+  browserSync   = require('browser-sync');
 
 
 //----------------------------------------
 // Clean
 //----------------------------------------
+
 gulp.task('clean', function() {
     return del(['target/*']);
 });
@@ -27,6 +28,7 @@ gulp.task('clean', function() {
 //----------------------------------------
 // Copy files
 //----------------------------------------
+
 gulp.task('copyfiles', function () {
   gulp.src([
     './src/**/*',
@@ -36,13 +38,16 @@ gulp.task('copyfiles', function () {
     '!./src/assets/images/**/*'
     ])
     .pipe(changed('target'))
-    .pipe(gulp.dest('target'))
-    .pipe(livereload());
+    .pipe(gulp.dest('target'));
 });
+
+gulp.task('copyfiles-watch', ['copyfiles'], browserSync.reload);
+
 
 //----------------------------------------
 // CSS
 //----------------------------------------
+
 gulp.task('styles', function () {
   gulp.src('src/assets/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
@@ -50,9 +55,11 @@ gulp.task('styles', function () {
       browsers: ['last 5 versions']
     }))
     .pipe(cssnano())
-    .pipe(gulp.dest('target/assets/css'))
-    .pipe(livereload());
+    .pipe(gulp.dest('target/assets/css'));
 });
+
+gulp.task('styles-watch', ['styles'], browserSync.reload);
+
 
 //----------------------------------------
 // Scripts
@@ -79,38 +86,49 @@ gulp.task('scripts', function () {
   ])
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('target/assets/js'))
-    .pipe(livereload());
+    .pipe(gulp.dest('target/assets/js'));
 
   // Modernizr
   gulp.src('./src/assets/js/lib/modernizr.js')
     .pipe(gulp.dest('target/assets/js'));
 });
 
+gulp.task('scripts-watch', ['scripts'], browserSync.reload);
+
+
 //----------------------------------------
 // Images
 //----------------------------------------
+
 gulp.task('images', function () {
   gulp.src('src/assets/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('target/assets/images'));
 });
 
+
 //----------------------------------------
-// Watch
+// Watch Task
 //----------------------------------------
+
 gulp.task('watch', function () {
-  livereload.listen();
+  browserSync({
+    // server: {
+    //   baseDir: 'target'
+    // }
+    proxy: 'local.project-template.com'
+  });
   gulp.watch([
     './src/**/*',
     '!./src/assets/scss',
     '!./src/assets/scss/**/*',
     '!./src/assets/js/**/*',
     '!./src/assets/images/**/*'
-    ], ['copyfiles']);
-  gulp.watch('src/assets/scss/**/*.scss', ['styles']);
+    ], ['copyfiles-watch']);
+  gulp.watch('src/assets/scss/**/*.scss', ['styles-watch']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
 });
+
 
 //----------------------------------------
 // Default Task
@@ -120,8 +138,9 @@ gulp.task('default', ['clean'], function() {
   gulp.run(['copyfiles', 'styles', 'scripts', 'images'])
 });
 
+
 //----------------------------------------
-// Watch
+// Dev Task
 //----------------------------------------
 
 gulp.task('dev', ['clean'], function() {

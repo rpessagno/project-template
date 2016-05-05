@@ -6,7 +6,6 @@
 - [NPM](https://docs.npmjs.com/getting-started/installing-node)
 - [Sass](http://sass-lang.com/install)
 - [MAMP](https://www.mamp.info/en/downloads/)
-- [LiveReload Browser Plugin](http://livereload.com/extensions/)
 - [GitHub for Mac](https://mac.github.com/)
 
 ##[SublimeText](http://www.sublimetext.com/3)
