@@ -113,10 +113,12 @@ gulp.task('images', function () {
 
 gulp.task('watch', function () {
   browserSync({
+    // MAMP
+    proxy: 'local.project-template.com'
+    // No MAMP
     // server: {
     //   baseDir: 'target'
     // }
-    proxy: 'local.project-template.com'
   });
   gulp.watch([
     './src/**/*',
