@@ -1,5 +1,11 @@
 #Project Template
 
+A starter template for my workflow, consisting of Gulp, Browsersync, Sass, PHP, jQuery, and more.
+
+----
+
+Things I use as part of this workflow:
+
 - [Node.js](https://nodejs.org/) (5.6.0)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
@@ -9,6 +15,13 @@
 - [GitHub Desktop](https://desktop.github.com/)
 - [SublimeText](http://www.sublimetext.com/3)
 - [Package Control](https://packagecontrol.io/installation)
+
+##jQuery + Plugins
+
+- [jQuery](http://jquery.com/)
+- [fastClick](https://github.com/dave1010/jquery-fast-click)
+- [FitVids.js](https://github.com/davatron5000/FitVids.js)
+- [Modernizr](https://modernizr.com/)
 
 ##SublimeText
 
@@ -34,7 +47,6 @@ User Settings (Optional):
   "word_wrap": true,
   "wrap_width": 120
 }
-
 ```
 
 ##MAMP
