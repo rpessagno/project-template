@@ -2,6 +2,21 @@
 // Form
 //==============================
 
+%input {
+  background-color: $white;
+  border: $border-grey-light solid 1px;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: currentColor;
+  display: block;
+  font: inherit;
+  line-height: 1;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .form {
   background: $bg-grey-light;
   border: $border-grey-light solid 1px;
@@ -24,20 +39,8 @@ input[type="email"],
 input[type="tel"],
 textarea,
 select {
-  background-color: $white;
-  border: $border-grey-light solid 1px;
-  border-radius: 0;
-  box-sizing: border-box;
-  box-shadow: none;
-  color: currentColor;
-  display: block;
-  font: inherit;
-  line-height: 1;
+  @extend %input;
   padding: 0.5em;
-  position: relative;
-  appearance: none;
-  -webkit-appearance: none;
-  -webkit-appearance: textfield;
   width: 100%;
 
   &:focus {
@@ -59,23 +62,10 @@ input[type="radio"] + input[type="radio"] {
 }
 
 input[type="submit"] {
-  background-color: $white;
-  border: $border-grey-light solid 1px;
-  border-radius: 0;
-  box-sizing: border-box;
-  box-shadow: none;
-  color: currentColor;
-  display: block;
-  font: inherit;
-  line-height: 1;
+  @extend %input;
   padding: 0.5em 1em;
-  position: relative;
-  -webkit-appearance: none;
-  -webkit-appearance: textfield;
 
   &:hover {
     border-color: $black;
   }
 }
-
-

@@ -41,7 +41,7 @@ User Settings (Optional):
 
 ##jQuery + Plugins
 
-- [jQuery](http://jquery.com/) (2.2.3)
+- [jQuery](http://jquery.com/)
 - [fastClick](https://github.com/dave1010/jquery-fast-click)
 - [FitVids.js](https://github.com/davatron5000/FitVids.js)
 - [Waypoints](http://imakewebthings.com/waypoints/)
@@ -77,8 +77,8 @@ Settings:
 
 ##Setup
 
-- Edit info in package.json
-- In gulpfile.js, change domain name in proxy settings under the **watch** task to "local.[domain].com"
+- In **package.json**, edit the `name`, `version`, `repository url`, and `license`
+- In **gulpfile.js**, change the `domainName` variable to your domain name
 - Run `npm install`
 
 ##Build

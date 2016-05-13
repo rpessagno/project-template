@@ -14,8 +14,10 @@ var
   concat        = require('gulp-concat'),
   changed       = require('gulp-changed'),
   del           = require('del'),
-  browserSync   = require('browser-sync').create();
+  browserSync   = require('browser-sync').create(),
+  sitemap       = require('gulp-sitemap');
 
+var domainName = 'project-template';
 
 //----------------------------------------
 // Clean
@@ -99,6 +101,23 @@ gulp.task('images', function () {
     .pipe(gulp.dest('target/assets/images'));
 });
 
+//----------------------------------------
+// Sitemap
+//----------------------------------------
+ 
+gulp.task('sitemap', function () {
+  gulp.src([
+    'src/**/*.{php,html}',
+    '!src/inc/*'
+    ], {
+      read: false
+    })
+  .pipe(sitemap({
+    siteUrl: 'http://www.' + domainName + '.com'
+  }))
+  .pipe(gulp.dest('./target'));
+});
+
 
 //----------------------------------------
 // Watch Task
@@ -107,7 +126,7 @@ gulp.task('images', function () {
 gulp.task('watch', function () {
   browserSync.init({
     // MAMP
-    proxy: 'local.project-template.com'
+    proxy: 'local.' + domainName + '.com'
     // No MAMP
     // server: {
     //   baseDir: 'target'
@@ -132,12 +151,12 @@ gulp.task('watch', function () {
 // Default Task
 //----------------------------------------
 
-gulp.task('default', ['copyfiles', 'styles', 'scripts', 'images']);
+gulp.task('default', ['copyfiles', 'styles', 'scripts', 'images', 'sitemap']);
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', ['copyfiles', 'styles', 'scripts', 'images', 'watch']);
+gulp.task('dev', ['copyfiles', 'styles', 'scripts', 'images', 'sitemap', 'watch']);
 
