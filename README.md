@@ -1,10 +1,10 @@
 #Project Template
 
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/) (5.6.0)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
-- [npm](https://docs.npmjs.com/getting-started/installing-node)
-- [Sass](http://sass-lang.com/install)
+- [npm](https://docs.npmjs.com/getting-started/installing-node) (3.8.3)
+- [Sass](http://sass-lang.com/install) (3.4.13)
 - [MAMP](https://www.mamp.info/en/downloads/)
 - [GitHub Desktop](https://desktop.github.com/)
 - [SublimeText](http://www.sublimetext.com/3)
