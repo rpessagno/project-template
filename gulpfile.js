@@ -14,7 +14,7 @@ var
   concat        = require('gulp-concat'),
   changed       = require('gulp-changed'),
   del           = require('del'),
-  browserSync   = require('browser-sync');
+  browserSync   = require('browser-sync').create();
 
 
 //----------------------------------------
@@ -38,10 +38,9 @@ gulp.task('copyfiles', function () {
     '!./src/assets/images/**/*'
     ])
     .pipe(changed('target'))
-    .pipe(gulp.dest('target'));
+    .pipe(gulp.dest('target'))
+    .pipe(browserSync.stream());
 });
-
-gulp.task('copyfiles-watch', ['copyfiles'], browserSync.reload);
 
 
 //----------------------------------------
@@ -55,10 +54,9 @@ gulp.task('styles', function () {
       browsers: ['last 5 versions']
     }))
     .pipe(cssnano())
-    .pipe(gulp.dest('target/assets/css'));
+    .pipe(gulp.dest('target/assets/css'))
+    .pipe(browserSync.stream());
 });
-
-gulp.task('styles-watch', ['styles'], browserSync.reload);
 
 
 //----------------------------------------
@@ -86,14 +84,13 @@ gulp.task('scripts', function () {
   ])
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('target/assets/js'));
+    .pipe(gulp.dest('target/assets/js'))
+    .pipe(browserSync.stream());
 
   // Modernizr
   gulp.src('./src/assets/js/lib/modernizr.js')
     .pipe(gulp.dest('target/assets/js'));
 });
-
-gulp.task('scripts-watch', ['scripts'], browserSync.reload);
 
 
 //----------------------------------------
@@ -112,7 +109,7 @@ gulp.task('images', function () {
 //----------------------------------------
 
 gulp.task('watch', function () {
-  browserSync({
+  browserSync.init({
     // MAMP
     proxy: 'local.project-template.com'
     // No MAMP
@@ -122,12 +119,15 @@ gulp.task('watch', function () {
   });
   gulp.watch([
     './src/**/*',
-    '!./src/assets/scss',
     '!./src/assets/scss/**/*',
     '!./src/assets/js/**/*',
     '!./src/assets/images/**/*'
-    ], ['copyfiles-watch']);
-  gulp.watch('src/assets/scss/**/*.scss', ['styles-watch']);
+    ], ['copyfiles']);
+  gulp.watch([
+    './target/**/*',
+    '!./target/assets/**/*'
+    ]).on('change', browserSync.reload);
+  gulp.watch('src/assets/scss/**/*.scss', ['styles']);
   gulp.watch('src/assets/js/**/*.js', ['scripts']);
 });
 
@@ -136,15 +136,12 @@ gulp.task('watch', function () {
 // Default Task
 //----------------------------------------
 
-gulp.task('default', ['clean'], function() {
-  gulp.run(['copyfiles', 'styles', 'scripts', 'images'])
-});
+gulp.task('default', ['copyfiles', 'styles', 'scripts', 'images']);
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', ['clean'], function() {
-  gulp.run(['copyfiles', 'styles', 'scripts', 'images', 'watch'])
-});
+gulp.task('dev', ['copyfiles', 'styles', 'scripts', 'images', 'watch']);
+
