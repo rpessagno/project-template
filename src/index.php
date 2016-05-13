@@ -13,6 +13,8 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque.</p>
 
     <p>Consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam.</p>
+
+    <h4>Unordered List</h4>
     
     <ul>
       <li>Lorem ipsum dolor sit amet</li>
@@ -23,6 +25,8 @@
       <li>Fuga, vitae nihil accusamus molestias delectus ut iusto incidunt iste, tempora esse, facere facilis dolorum ab natus aut suscipit fugiat cupiditate ipsum nemo enim veritatis saepe quis excepturi eligendi. Eos.</li>
     </ul>
 
+    <h4>Ordered List</h4>
+
      <ol>
       <li>Lorem ipsum dolor sit amet</li>
       <li>Consectetur adipisicing elit</li>
@@ -31,18 +35,23 @@
       <li>Nesciunt qui, sapiente fugit magni accusantium, eveniet consequatur, dolore harum odio maiores expedita neque rem reiciendis. Sed dicta quidem esse iste fugit minus omnis libero eum dolorem, deleniti impedit quia!</li>
       <li>Fuga, vitae nihil accusamus molestias delectus ut iusto incidunt iste, tempora esse, facere facilis dolorum ab natus aut suscipit fugiat cupiditate ipsum nemo enim veritatis saepe quis excepturi eligendi. Eos.</li>
     </ol>
-  
-  </section>
 
-  <section class="section">
+    <h3>Videos</h3>
+
+    <h4>Vimeo</h4>
+
     <iframe src="//player.vimeo.com/video/89527215?title=0&amp;byline=0&amp;portrait=0" class="video-player" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </section>
 
-  <section class="section">
+    <h4>YouTube</h4>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YBtspm8j8M" frameborder="0" allowfullscreen></iframe>
+
+    <h3>Form</h3>
+    <p><a href="http://www.the-art-of-web.com/html/html5-form-validation/" target="_blank">Form Validation Examples</a></p>
     <form class="form">
       <div class="form-field">
         <label>Input (text)</label>
-        <input type="text">
+        <input type="text" required >
       </div>
       <div class="form-field">
         <label>Input (password)</label>
@@ -83,6 +92,7 @@
         <input type="submit" value="Submit">
       </div>
     </form>
+
   </section>
   
 </div>

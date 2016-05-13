@@ -2,8 +2,6 @@
 
 A starter template for my workflow, consisting of Gulp, Browsersync, Sass, PHP, jQuery, and more.
 
-----
-
 Things I use as part of this workflow:
 
 - [Node.js](https://nodejs.org/) (5.6.0)
@@ -13,15 +11,7 @@ Things I use as part of this workflow:
 - [Sass](http://sass-lang.com/install) (3.4.13)
 - [MAMP](https://www.mamp.info/en/downloads/)
 - [GitHub Desktop](https://desktop.github.com/)
-- [SublimeText](http://www.sublimetext.com/3)
-- [Package Control](https://packagecontrol.io/installation)
-
-##jQuery + Plugins
-
-- [jQuery](http://jquery.com/)
-- [fastClick](https://github.com/dave1010/jquery-fast-click)
-- [FitVids.js](https://github.com/davatron5000/FitVids.js)
-- [Modernizr](https://modernizr.com/)
+- [SublimeText](http://www.sublimetext.com/3) / [Package Control](https://packagecontrol.io/installation)
 
 ##SublimeText
 
@@ -49,7 +39,18 @@ User Settings (Optional):
 }
 ```
 
+##jQuery + Plugins
+
+- [jQuery](http://jquery.com/) (2.2.3)
+- [fastClick](https://github.com/dave1010/jquery-fast-click)
+- [FitVids.js](https://github.com/davatron5000/FitVids.js)
+- Waypoints (2.0.5)
+- [Modernizr](https://modernizr.com/)
+
+
 ##MAMP
+
+I use MAMP so I can create virtual hosts and have nice local URLs, such "local.domain.com," and so I can view any project in a browser without having to run a build first. However, Browsersync will still open the current project at "localhost:3000."
 
 Add entry to hosts file:
 
@@ -86,5 +87,5 @@ Settings:
 
 - Launch MAMP
 - Run `gulp dev` to build project
-- Run `gulp clean` to delete target folder
+- `gulp clean` can be used to delete target folder
 
