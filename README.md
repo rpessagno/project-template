@@ -3,60 +3,71 @@
 - [Node.js](https://nodejs.org/)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
-- [NPM](https://docs.npmjs.com/getting-started/installing-node)
+- [npm](https://docs.npmjs.com/getting-started/installing-node)
 - [Sass](http://sass-lang.com/install)
 - [MAMP](https://www.mamp.info/en/downloads/)
-- [GitHub for Mac](https://mac.github.com/)
+- [GitHub Desktop](https://desktop.github.com/)
+- [SublimeText](http://www.sublimetext.com/3)
+- [Package Control](https://packagecontrol.io/installation)
 
-##[SublimeText](http://www.sublimetext.com/3)
+##SublimeText
 
-- Install [Package Control](https://packagecontrol.io/installation)
-
-###Sublime Packages:
+###Packages:
 
 - Emmet
-- Emmet Css Snippets
 - jQuery
 - jQuery Snippets pack
 - JSLint
 - SublimeLinter
 - SCSS
 - SublimeLinter-contrib-scss-lint
+- SublimeLinter-contrib-eslint
 
-###Recommended Minimum Settings
+###User Settings (Optional)
 
 ```
 {
-  "font_size": 12,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "word_wrap": true,
-  "wrap_width": 120
+	"color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 2,
+	"word_wrap": true,
+	"wrap_width": 120
 }
 ```
 
-##[Git](http://www.git-scm.com/)
+##MAMP
+
+Add entries to hosts file:
+
+> /private/etc/hosts
 
 ```
-git init
-git add .
-git commit -m "first commit"
+127.0.0.1     local.[domain].com
 ```
 
-##[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+Add virtual hosts to:
 
-###Install Gulp plugins via package.json:
-
-```
-npm install
-```
-
-###Run Gulp
+> /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 
 ```
-gulp dev
+<VirtualHost *:80>
+    DocumentRoot "/Users/[user]/[path]/[folder]"
+    ServerName local.[domain].com
+</VirtualHost>
 ```
+
+##Building the project
+
+- Launch MAMP
+	- Apache Port: 80
+	- Nginx Port: 8080
+	- MySQL Port: 3306 
+- Edit info in package.json
+- Edit domain name in proxy settings under the **watch** task to "local.[domain].com"
+- Run `npm install`
+- Run `gulp dev`
+
