@@ -44,9 +44,7 @@ User Settings (Optional):
 - [jQuery](http://jquery.com/) (2.2.3)
 - [fastClick](https://github.com/dave1010/jquery-fast-click)
 - [FitVids.js](https://github.com/davatron5000/FitVids.js)
-- Waypoints (2.0.5)
-- [Modernizr](https://modernizr.com/)
-
+- [Waypoints](http://imakewebthings.com/waypoints/)
 
 ##MAMP
 

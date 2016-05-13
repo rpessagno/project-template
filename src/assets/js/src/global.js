@@ -6,12 +6,14 @@ FastClick.attach(document.body);
 
 $('.wrapper').fitVids();
 
-$('.waypoint').waypoint(function() {
-  $(this).addClass('animate-in');
-}, {
-  offset: '80%',
-  triggerOnce: true
+var animate = new Waypoint({
+  element: $('.animate'),
+  handler: function() {
+    this.element.addClass('animate-in');
+  },
+  offset: '75%'
 });
+
 
 // End Document Ready
 })(window, document, jQuery);

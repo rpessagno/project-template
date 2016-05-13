@@ -86,10 +86,6 @@ gulp.task('scripts', function () {
     .pipe(uglify())
     .pipe(gulp.dest('target/assets/js'))
     .pipe(browserSync.stream());
-
-  // Modernizr
-  gulp.src('./src/assets/js/lib/modernizr.js')
-    .pipe(gulp.dest('target/assets/js'));
 });
 
 
