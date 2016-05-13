@@ -27,12 +27,12 @@ User Settings (Optional):
 
 ```
 {
-	"color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
-	"font_size": 12,
-	"tab_size": 2,
+  "color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
+  "font_size": 12,
+  "tab_size": 2,
   "translate_tabs_to_spaces": true,
-	"word_wrap": true,
-	"wrap_width": 120
+  "word_wrap": true,
+  "wrap_width": 120
 }
 
 ```
@@ -53,8 +53,8 @@ Add virtual host info to:
 
 ```
 <VirtualHost *:80>
-    DocumentRoot "/Users/[user]/[path]/[folder]"
-    ServerName local.[domain].com
+  DocumentRoot "/Users/[user]/[path]/[folder]"
+  ServerName local.[domain].com
 </VirtualHost>
 ```
 
