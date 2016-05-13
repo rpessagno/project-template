@@ -12,7 +12,7 @@
 
 ##SublimeText
 
-###Packages:
+Packages:
 
 - Emmet
 - jQuery
@@ -23,7 +23,7 @@
 - SublimeLinter-contrib-scss-lint
 - SublimeLinter-contrib-eslint
 
-###User Settings (Optional)
+User Settings (Optional):
 
 ```
 {
@@ -47,7 +47,7 @@ Add entry to hosts file:
 127.0.0.1     local.[domain].com
 ```
 
-Add virtual host to:
+Add virtual host info to:
 
 > /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 
@@ -58,7 +58,7 @@ Add virtual host to:
 </VirtualHost>
 ```
 
-MAMP Settings:
+Settings:
 
 - Apache Port: 80
 - Nginx Port: 8080
@@ -67,7 +67,7 @@ MAMP Settings:
 ##Setup
 
 - Edit info in package.json
-- Edit domain name in proxy settings under the **watch** task to "local.[domain].com"
+- In gulpfile.js, change domain name in proxy settings under the **watch** task to "local.[domain].com"
 - Run `npm install`
 
 ##Build
