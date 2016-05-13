@@ -1,4 +1,4 @@
-#Rosetta Project Template
+#Project Template
 
 - [Node.js](https://nodejs.org/)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
@@ -29,19 +29,17 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
 	"font_size": 12,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
 	"tab_size": 2,
+  "translate_tabs_to_spaces": true,
 	"word_wrap": true,
 	"wrap_width": 120
 }
+
 ```
 
 ##MAMP
 
-Add entries to hosts file:
+Add entry to hosts file:
 
 > /private/etc/hosts
 
@@ -49,7 +47,7 @@ Add entries to hosts file:
 127.0.0.1     local.[domain].com
 ```
 
-Add virtual hosts to:
+Add virtual host to:
 
 > /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 
@@ -60,14 +58,18 @@ Add virtual hosts to:
 </VirtualHost>
 ```
 
+MAMP Settings:
+
+- Apache Port: 80
+- Nginx Port: 8080
+- MySQL Port: 3306
+
 ##Building the project
 
 - Launch MAMP
-	- Apache Port: 80
-	- Nginx Port: 8080
-	- MySQL Port: 3306 
 - Edit info in package.json
 - Edit domain name in proxy settings under the **watch** task to "local.[domain].com"
 - Run `npm install`
 - Run `gulp dev`
+- Run `gulp clean` to clear target folder
 
