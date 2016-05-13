@@ -64,12 +64,15 @@ MAMP Settings:
 - Nginx Port: 8080
 - MySQL Port: 3306
 
-##Building the project
+##Setup
 
-- Launch MAMP
 - Edit info in package.json
 - Edit domain name in proxy settings under the **watch** task to "local.[domain].com"
 - Run `npm install`
-- Run `gulp dev`
-- Run `gulp clean` to clear target folder
+
+##Build
+
+- Launch MAMP
+- Run `gulp dev` to build project
+- Run `gulp clean` to delete target folder
 
