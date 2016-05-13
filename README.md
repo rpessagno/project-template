@@ -42,7 +42,7 @@ User Settings (Optional):
 ##jQuery + Plugins
 
 - [jQuery](http://jquery.com/)
-- [fastClick](https://github.com/dave1010/jquery-fast-click)
+- [FastClick](https://github.com/ftlabs/fastclick)
 - [FitVids.js](https://github.com/davatron5000/FitVids.js)
 - [Waypoints](http://imakewebthings.com/waypoints/)
 
