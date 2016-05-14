@@ -45,8 +45,6 @@
 <meta itemprop="description" content="Description">
 <meta itemprop="image" content="/assets/images/social/googleplus.png">
 
-<script src="/assets/js/modernizr.js"></script>
-
 </head>
 <body>
 

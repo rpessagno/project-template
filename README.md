@@ -12,8 +12,15 @@ Things I use as part of this workflow:
 - [MAMP](https://www.mamp.info/en/downloads/)
 - [GitHub Desktop](https://desktop.github.com/)
 - [SublimeText](http://www.sublimetext.com/3) / [Package Control](https://packagecontrol.io/installation)
+- [jQuery](http://jquery.com/) + Plugins
+  - [FastClick](https://github.com/ftlabs/fastclick)
+  - [FitVids.js](https://github.com/davatron5000/FitVids.js)
+  - [Waypoints](http://imakewebthings.com/waypoints/)
+  - [Browser-Update](http://www.browser-update.org/)
 
-##SublimeText
+##Setup
+
+###SublimeText
 
 Packages:
 
@@ -39,14 +46,7 @@ User Settings (Optional):
 }
 ```
 
-##jQuery + Plugins
-
-- [jQuery](http://jquery.com/)
-- [FastClick](https://github.com/ftlabs/fastclick)
-- [FitVids.js](https://github.com/davatron5000/FitVids.js)
-- [Waypoints](http://imakewebthings.com/waypoints/)
-
-##MAMP
+###MAMP
 
 I use MAMP so I can create virtual hosts and have nice local URLs, such "local.domain.com," and so I can view any project in a browser without having to run a build first. However, Browsersync will still open the current project at "localhost:3000."
 
@@ -75,8 +75,9 @@ Settings:
 - Nginx Port: 8080
 - MySQL Port: 3306
 
-##Setup
+###New Project
 
+- Download, unzip, and rename the project-template folder
 - In **package.json**, edit the `name`, `version`, `repository url`, and `license`
 - In **gulpfile.js**, change the `domainName` variable to your domain name
 - Run `npm install`
@@ -84,6 +85,6 @@ Settings:
 ##Build
 
 - Launch MAMP
-- Run `gulp dev` to build project
+- Run `gulp dev` to build the project
 - `gulp clean` can be used to delete target folder
 

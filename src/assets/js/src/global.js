@@ -14,6 +14,5 @@ var animate = new Waypoint({
   offset: '75%'
 });
 
-
 // End Document Ready
 })(window, document, jQuery);

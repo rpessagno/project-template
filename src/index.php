@@ -55,27 +55,31 @@
     <form class="form">
       <div class="form-field">
         <label>Input (text)</label>
-        <input type="text" required >
+        <input type="text" value="" class="form-input">
+      </div>
+      <div class="form-field">
+        <label>Input (text)</label>
+        <input type="text" value="" class="form-input" required pattern=".{4,}" title="Requires at least 4 characters" placeholder="Requires at least 4 characters">
       </div>
       <div class="form-field">
         <label>Input (password)</label>
-        <input type="password">
+        <input type="password" value="" class="form-input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must be at least 8 characters and contain at least one number and one uppercase and lowercase letter">
       </div>
       <div class="form-field">
         <label>Input (email)</label>
-        <input type="email">
+        <input type="email" value="" class="form-input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please provide a valid email" placeholder="Requires a valid email">
       </div>
       <div class="form-field">
         <label>Input (tel)</label>
-        <input type="tel">
+        <input type="tel" value="" class="form-input">
       </div>
       <div class="form-field">
          <label>Text Area</label>
-        <textarea rows="5"></textarea>
+        <textarea rows="5" value="" class="form-input"></textarea>
       </div>
       <div class="form-field">
         <label>Select</label>
-        <select required>
+        <select required value="" class="form-input">
           <option disabled selected>Please select one</option>
           <option value="Option 1">Option 1</option>
           <option value="Option 2">Option 2</option>

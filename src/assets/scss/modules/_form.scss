@@ -15,12 +15,14 @@
   position: relative;
   appearance: none;
   -webkit-appearance: none;
+  transition: border-color 0.2s;
 }
 
 .form {
   background: $bg-grey-light;
   border: $border-grey-light solid 1px;
   padding: 1em;
+  margin: 1em 0 0 0;
 
   &-field {
     display: block;
@@ -48,6 +50,21 @@ select {
     outline: none;
     border-color: $black;
   }
+
+  &:not([value=""]),
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $black;
+
+    &:invalid {
+      border-color: red;
+    }
+
+    &:valid {
+      border-color: green;
+    }
+  }  
 }
 
 input[type="checkbox"],
