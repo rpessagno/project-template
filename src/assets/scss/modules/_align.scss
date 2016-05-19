@@ -1,0 +1,33 @@
+//==============================
+// Align
+//==============================
+
+.align-wrap {
+  background: $bg-grey-light;
+  height: 5em;
+  width: 5em;
+  display: inline-block;
+  margin-right: 1em;
+
+  div {
+    background: $black;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+  }
+
+  .align-horizontal {
+    @extend %align-horizontal;
+
+  }
+
+  .align-vertical {
+    @extend %align-vertical;
+
+  }
+
+  .align-horizontal-vertical {
+    @extend %align-horizontal-vertical;
+
+  }
+}

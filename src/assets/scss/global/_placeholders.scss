@@ -18,9 +18,23 @@
   width: 100%;
 }
 
-%position-centered {
-  position: absolute;
+
+// Align
+%align-horizontal {
+  position: relative;
   left: 50%;
+  transform: translateX(-50%);
+}
+
+%align-vertical {
+  position: relative;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
+}
+
+%align-horizontal-vertical {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

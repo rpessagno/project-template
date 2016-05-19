@@ -114,9 +114,15 @@
   </section>
 
   <section class="section body-copy">
-    <h2>Position Centered</h2>
-    <div class="pos-centered-wrap">
-      <div class="pos-centered"></div>
+    <h2>Align</h2>
+    <div class="align-wrap">
+      <div class="align-horizontal"></div>
+    </div>
+    <div class="align-wrap">
+      <div class="align-vertical"></div>
+    </div>
+    <div class="align-wrap">
+      <div class="align-horizontal-vertical"></div>
     </div>
   </section>
 

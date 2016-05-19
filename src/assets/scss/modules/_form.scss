@@ -73,6 +73,11 @@ select {
   background-repeat: no-repeat;
   background-size: 10px auto;
   padding-right: 2.5em;
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
 }
 
 input[type="checkbox"],
