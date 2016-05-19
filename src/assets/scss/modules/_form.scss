@@ -67,6 +67,13 @@ select {
   }  
 }
 
+select {
+  background-image: url('/assets/images/global/arrow-down.svg');
+  background-position:  calc(100% - 1em) center;
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   display: inline-block;
