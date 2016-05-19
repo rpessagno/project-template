@@ -57,5 +57,18 @@
   .columns {
     @include columns(1, 2, 3, 3);
   }
+
+  .pos-centered-wrap {
+    background: $bg-grey-light;
+    height: 20em;
+    position: relative;
+
+    div {
+      @extend %position-centered;
+      background: $border-grey-light;
+      height: 10em;
+      width: 50%;
+    }
+  }
   
 }

@@ -113,6 +113,13 @@
 
   </section>
 
+  <section class="section body-copy">
+    <h2>Position Centered</h2>
+    <div class="pos-centered-wrap">
+      <div class="pos-centered"></div>
+    </div>
+  </section>
+
   <section class="body-copy">
     <h2>Videos</h2>
 
