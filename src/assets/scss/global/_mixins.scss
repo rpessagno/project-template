@@ -4,45 +4,82 @@
 
 // Breakpoints
 @mixin bp($bp) {
-	@if $bp == m {
-		@media only screen and (min-width: 480px) { @content; }
-	}
-	@else if $bp == l {
-	  @media only screen and (min-width: 768px) { @content; }
-	}
-	@else if $bp == xl {
-	  @media only screen and (min-width: 1024px) { @content; }
-	}
+  @if $bp == m {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $bp == l {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $bp == xl {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
 }
 
 // Font declaration
 @mixin font($font, $file, $weight, $style) {
-	@font-face {
-	  font-family: '#{$font}';
-	  src: url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot'),
-	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot?#iefix') format('embedded-opentype'),
-	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff2') format('woff2'),
-	  	url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff') format('woff'),
-	    url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.ttf') format('truetype'),
-	    url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.svg##{$file}') format('svg');
-	  font-weight: $weight;
-	  font-style: $style;
-	}
+  @font-face {
+    font-family: '#{$font}';
+    src: url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot'),
+      url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.eot?#iefix') format('embedded-opentype'),
+      url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff2') format('woff2'),
+      url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.woff') format('woff'),
+      url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.ttf') format('truetype'),
+      url('#{$path-to-fonts}/#{$file}/#{$file}-#{$weight}-#{$style}.svg##{$file}') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
 }
 
 // Font sizes at all breakpoints
 @mixin font-size($s, $m, $l, $xl) {
-	font-size: $s;
+  font-size: $s;
 
-	@include bp(m) {
-		font-size: $m;
-	}
+  @include bp(m) {
+    font-size: $m;
+  }
 
-	@include bp(l) {
-		font-size: $l;
-	}
+  @include bp(l) {
+    font-size: $l;
+  }
 
-	@include bp(xl) {
-		font-size: $xl;
-	}
+  @include bp(xl) {
+    font-size: $xl;
+  }
+}
+
+// Columns
+@mixin columns($s, $m, $l, $xl) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-start;
+
+  > div {
+    @if ($s == 1) { width: 100%; }
+    @else {
+      width: calc(100% / #{$s} - 0.5em);
+    }
+
+    @include bp(m) {
+      @if ($m == 1) { width: 100%; }
+      @else {
+        width: calc(100% / #{$m} - 0.75em);
+      }
+    }
+
+    @include bp(l) {
+      @if ($l == 1) { width: 100%; }
+      @else {
+        width: calc(100% / #{$l} - 1em);
+      }
+    }
+
+    @include bp(xl) {
+      @if ($xl == 1) { width: 100%; }
+      @else {
+        width: calc(100% / #{$xl} - 2em);
+      }
+    }
+  }
 }

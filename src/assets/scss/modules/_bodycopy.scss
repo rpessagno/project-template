@@ -53,5 +53,9 @@
   .fluid-width-video-wrapper {
     margin: 1em 0 0;
   }
+
+  .columns {
+    @include columns(1, 2, 3, 3);
+  }
   
 }

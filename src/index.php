@@ -40,16 +40,6 @@
 
     <p class="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque.</p>
 
-    <h3>Videos</h3>
-
-    <h4>Vimeo</h4>
-
-    <iframe src="//player.vimeo.com/video/89527215?title=0&amp;byline=0&amp;portrait=0" class="video-player" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-    <h4>YouTube</h4>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YBtspm8j8M" frameborder="0" allowfullscreen></iframe>
-
     <h3>Form</h3>
     <p><a href="http://www.the-art-of-web.com/html/html5-form-validation/" target="_blank">Form Validation Examples</a></p>
     <form class="form">
@@ -102,6 +92,39 @@
     </form>
 
   </section>
+
+  <section class="section body-copy">
+    
+    <h2>Columns</h2>
+    <div class="columns">
+      <div>
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam cupiditate voluptate sint quas, eius voluptatibus dolorum ut non numquam recusandae aperiam similique necessitatibus, facilis natus a nemo corporis. Similique.</p>
+      </div>
+      <div>
+        <h3>Column 2</h3>
+        <p>Voluptatum consequuntur, unde optio ea sunt omnis voluptatem in numquam impedit consectetur laboriosam pariatur culpa, quidem tempora. Dolor architecto rerum quidem saepe ex, libero at facilis, sit commodi corrupti, debitis.</p>
+      </div>
+      <div>
+        <h3>Column 3</h3>
+        <p>Voluptas earum, cupiditate accusamus a nostrum blanditiis, odio iusto quia. Provident consequuntur repellat quaerat molestiae illum perferendis ex culpa natus fugit, consectetur quibusdam, quae eaque impedit eveniet nostrum di</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="body-copy">
+    <h2>Videos</h2>
+
+    <h4>Vimeo</h4>
+
+    <iframe src="//player.vimeo.com/video/89527215?title=0&amp;byline=0&amp;portrait=0" class="video-player" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    <h4>YouTube</h4>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YBtspm8j8M" frameborder="0" allowfullscreen></iframe>
+  </section>
+
   
 </div>
 
