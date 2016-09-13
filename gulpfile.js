@@ -17,7 +17,13 @@ var
   browserSync   = require('browser-sync').create(),
   sitemap       = require('gulp-sitemap');
 
+
+//----------------------------------------
+// Variables
+//----------------------------------------
+
 var domainName = 'project-template';
+
 
 //----------------------------------------
 // Clean
@@ -26,6 +32,7 @@ var domainName = 'project-template';
 gulp.task('clean', function() {
     return del(['target/*']);
 });
+
 
 //----------------------------------------
 // Copy files

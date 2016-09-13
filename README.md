@@ -81,11 +81,24 @@ Settings:
 - Nginx Port: 8080
 - MySQL Port: 3306
 
+###Without MAMP
+
+If you don't need to use MAMP, comment out the following line in **gulpfile.js**:
+```
+proxy: 'local.' + domainName + '.com'
+```
+and uncomment these lines:
+```
+// server: {
+//   baseDir: 'target'
+// }
+```
+
 ###New Project
 
 - Download, unzip, and rename the project-template folder
 - In **package.json**, edit the `name`, `version`, `repository url`, and `license`
-- In **gulpfile.js**, change the `domainName` variable to your domain name
+- In **gulpfile.js**, change the `domainName` value to your domain name
 - Run `npm install`
 
 ##Build
