@@ -15,7 +15,7 @@ Things I use as part of this workflow:
 - [jQuery](http://jquery.com/) + Plugins
   - [FastClick](https://github.com/ftlabs/fastclick)
   - [FitVids.js](https://github.com/davatron5000/FitVids.js)
-  - [Waypoints](http://imakewebthings.com/waypoints/)
+  - [Waypoints](http://imakewebthings.com/waypoints/) (2.0.5)
   - [Browser-Update](http://www.browser-update.org/)
 
 ##Setup
@@ -32,8 +32,9 @@ Packages:
 - SCSS
 - SublimeLinter-contrib-scss-lint
 - SublimeLinter-contrib-eslint
+- One Dark Material
 
-User Settings (Optional):
+User Settings:
 
 ```
 {
