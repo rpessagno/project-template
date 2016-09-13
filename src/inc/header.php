@@ -45,7 +45,23 @@
 <meta itemprop="description" content="Description">
 <meta itemprop="image" content="/assets/images/social/googleplus.png">
 
-<script src="/assets/js/modernizr.js"></script>
-
 </head>
 <body>
+
+<header class="header-main">
+	Header
+  
+  
+  <nav class="nav-main">
+    <ul>
+      <li><a href="#">Nav Item 1</a></li>
+      <li><a href="#">Nav Item 2</a></li>
+      <li><a href="#">Nav Item 3</a></li>
+      <li><a href="#">Nav Item 4</a></li>
+    </ul>
+    <span class="nav-main-button"></span>
+  </nav>
+
+  
+
+</header>

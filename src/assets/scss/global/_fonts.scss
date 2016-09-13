@@ -2,12 +2,4 @@
 // Fonts
 //==============================
 
-// @font-face {
-//   font-family: 'fontname';
-//   src: url('../fonts/fontname/fontname.eot');
-//   src: url('../fonts/fontname/fontname.eot?#iefix') format('embedded-opentype'),
-//     url('../fonts/fontname/fontname.woff') format('woff'),
-//     url('../fonts/fontname/fontname.otf') format('opentype');
-//   font-weight: 100;
-//   font-style: normal;
-// }
+//@include font('Font', file, weight, style);

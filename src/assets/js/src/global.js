@@ -1,11 +1,17 @@
-(function (window, document, $, undefined) {
-  'use strict';
-  // place entire program inside of this closure
+$(function() {
+// Begin Document Ready
 
 FastClick.attach(document.body);
 
+$('.wrapper').fitVids();
 
-//$('.thing-with-videos').fitVids();
+/*
+$('.element').waypoint(function() {
+  //stuff
+}, {
+  offset: '50%'
+});
+*/
 
 // End Document Ready
-})(window, document, jQuery);
+});

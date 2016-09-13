@@ -1,7 +1,7 @@
-(function (window, document, $, undefined) {
-  'use strict';
-  // place entire program inside of this closure
+$(function() {
+// Begin Document Ready
+
 
 
 // End Document Ready
-})(window, document, jQuery);
+});

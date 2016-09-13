@@ -12,18 +12,23 @@
 @import 'global/normalize';
 @import 'global/base';
 @import 'global/placeholders';
+@import 'global/animations';
 
 
 // Modules
 //------------------------------
 
-@import 'modules/base';
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/wrapper';
+@import 'modules/bodycopy';
+@import 'modules/form';
 
 
 // Pages
 //------------------------------
 
-@import 'pages/base';
+// @import 'pages/page';
 
 
 // Print

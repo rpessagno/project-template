@@ -1,0 +1,59 @@
+//==============================
+// Body Copy
+//==============================
+
+.body-copy {
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+	h1 {
+    @include font-size(50px, 40px, 30px, 25px);
+    line-height: 1.1em;
+    margin: 1em 0 0;
+  }
+
+  h2 {
+    @include font-size(30px, 25px, 22px, 20px);
+    line-height: 1.1em;
+    margin: 1em 0 0;
+  }
+
+  h3 {
+    @include font-size(25px, 22px, 20px, 18px);
+    line-height: 1.1em;
+    margin: 1em 0 0;
+  }
+
+  h4 {
+    @include font-size(20px, 18px, 17px, 16px);
+    line-height: 1.1em;
+    margin: 1em 0 0;
+  }
+
+  p,
+  li {
+    @include font-size(16px, 16px, 15px, 14px);
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 1em 0 0;
+  }
+
+  ul,
+  ol {
+    margin: 1em 0 0 2em;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 .5em;
+  }
+
+  .fluid-width-video-wrapper {
+    margin: 1em 0 0;
+  }
+  
+}
