@@ -37,8 +37,13 @@ User Settings (Optional):
 
 ```
 {
-  "color_scheme": "Packages/User/SublimeLinter/Mac Classic (SL).tmTheme",
+  "color_scheme": "Packages/User/SublimeLinter/OneDark (SL).tmTheme",
   "font_size": 12,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "selectionBackground": "ff0000",
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "word_wrap": true,
@@ -48,7 +53,7 @@ User Settings (Optional):
 
 ###MAMP
 
-I use MAMP so I can create virtual hosts and have nice local URLs, such "local.domain.com," and so I can view any project in a browser without having to run a build first. However, Browsersync will still open the current project at "localhost:3000."
+I use MAMP to create virtual hosts and have nice local URLs, such "local.domain.com," and so I can view any project in a browser without having to run a build first. Browsersync will still open the current project at **localhost:3000**.
 
 Add entry to hosts file:
 

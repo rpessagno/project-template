@@ -36,10 +36,6 @@
       <li>Fuga, vitae nihil accusamus molestias delectus ut iusto incidunt iste, tempora esse, facere facilis dolorum ab natus aut suscipit fugiat cupiditate ipsum nemo enim veritatis saepe quis excepturi eligendi. Eos.</li>
     </ol>
 
-    <h3>Scroll Animation</h3>
-
-    <p class="animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse perferendis temporibus quos alias est facere placeat, saepe nobis qui repellendus, animi nesciunt quod consequatur quisquam omnis laudantium distinctio ullam neque.</p>
-
     <h3>Form</h3>
     <p><a href="http://www.the-art-of-web.com/html/html5-form-validation/" target="_blank">Form Validation Examples</a></p>
     <form class="form">

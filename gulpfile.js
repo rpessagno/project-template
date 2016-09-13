@@ -81,7 +81,6 @@ gulp.task('scripts', function () {
     './src/assets/js/lib/console.js',
     './src/assets/js/lib/*.js',
     './src/assets/js/src/*.js',
-    '!./src/assets/js/lib/modernizr.js',
     '!./src/assets/js/src/blank.js'
   ])
     .pipe(concat('main.js'))
