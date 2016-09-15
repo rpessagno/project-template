@@ -53,9 +53,9 @@ User Settings:
 
 ###MAMP
 
-I use MAMP to create virtual hosts and have nice local URLs, such "local.domain.com," and so I can view any project in a browser without having to run a build first. Browsersync will still open the current project at **localhost:3000**.
+I use MAMP mainly to work on projects using PHP or WordPress, but it also allows me to create virtual hosts so I can view my projects at local URLs, such **local.[domain].com**. Browsersync will still open the current project at **localhost:3000**, however.
 
-Add entry to hosts file:
+To create a virtual host, first add an entry to your hosts file:
 
 > /private/etc/hosts
 
@@ -63,7 +63,7 @@ Add entry to hosts file:
 127.0.0.1     local.[domain].com
 ```
 
-Add virtual host info to:
+Then point to where your files are located in:
 
 > /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 
@@ -74,7 +74,7 @@ Add virtual host info to:
 </VirtualHost>
 ```
 
-Settings:
+Make sure MAMP settings look like this:
 
 - Apache Port: 80
 - Nginx Port: 8080
@@ -82,7 +82,7 @@ Settings:
 
 ###Without MAMP
 
-If you don't need to use MAMP, comment out the following line in **gulpfile.js**:
+If your project doesn't require MAMP, comment out the following line in **gulpfile.js**:
 ```
 proxy: 'local.' + domainName + '.com'
 ```
