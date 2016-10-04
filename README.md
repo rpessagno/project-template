@@ -63,6 +63,17 @@ To create a virtual host, first add an entry to your hosts file:
 127.0.0.1     local.[domain].com
 ```
 
+Allow MAMP to use virtual hosts by opening the following file:
+
+> /Applications/MAMP/conf/apache/httpd.conf
+
+And remove the comment on the line under `# Virtual hosts` to look like this:
+
+```
+# Virtual hosts
+Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+```
+
 Then point to where your files are located in:
 
 > /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
