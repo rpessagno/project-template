@@ -1,0 +1,47 @@
+
+/*!
+Theme Name: Project Template
+Author: Robert Pessagno
+Version: 1.0
+*/
+
+//==============================
+// Main
+//==============================
+
+
+// Global
+//------------------------------
+
+@import 'global/mixins';
+@import 'global/variables';
+@import 'global/fonts';
+@import 'global/normalize';
+@import 'global/base';
+@import 'global/placeholders';
+
+
+// Components
+//------------------------------
+
+
+// Libraries
+//------------------------------
+
+
+
+// Modules
+//------------------------------
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/forms';
+
+
+// Templates
+//------------------------------
+
+
+// Print
+//------------------------------
+@import 'global/print';

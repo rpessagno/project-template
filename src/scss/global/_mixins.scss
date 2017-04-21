@@ -1,0 +1,40 @@
+//==============================
+// Mixins
+//==============================
+
+// Breakpoints
+@mixin bp($bp) {
+  @if $bp == xxl {
+    @media only screen and (min-width: 1501px) { @content; }
+  }
+  @if $bp == xl {
+    @media only screen and (max-width: 1500px) { @content; }
+  }
+  @else if $bp == l {
+    @media only screen and (max-width: 1200px) { @content; }
+  }
+  @else if $bp == m {
+    @media only screen and (max-width: 1023px) { @content; }
+  }
+  @else if $bp == s {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $bp == xs {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $bp == xxs {
+    @media only screen and (max-width: 340px) { @content; }
+  }
+  @else if $bp == retina {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }}
+
+// Font declaration
+@mixin font($font, $folder, $file, $weight, $style) {
+  @font-face {
+    font-family: '#{$font}';
+    src: url('assets/fonts/#{$folder}/#{$file}.woff') format('woff'),
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

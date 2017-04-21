@@ -10,12 +10,8 @@ var
   jshint        = require('gulp-jshint'),
   stylish       = require('jshint-stylish'),
   uglify        = require('gulp-uglify'),
-  imagemin      = require('gulp-imagemin'),
   concat        = require('gulp-concat'),
-  changed       = require('gulp-changed'),
-  del           = require('del'),
-  browserSync   = require('browser-sync').create(),
-  sitemap       = require('gulp-sitemap');
+  browserSync   = require('browser-sync').create();
 
 
 //----------------------------------------
@@ -23,60 +19,35 @@ var
 //----------------------------------------
 
 var domainName = 'project-template';
-
-
-//----------------------------------------
-// Clean
-//----------------------------------------
-
-gulp.task('clean', function() {
-    return del(['target/*']);
-});
-
-
-//----------------------------------------
-// Copy files
-//----------------------------------------
-
-gulp.task('copyfiles', function () {
-  gulp.src([
-    './src/**/*',
-    '!./src/assets/scss',
-    '!./src/assets/scss/**/*',
-    '!./src/assets/js/**/*',
-    '!./src/assets/images/**/*'
-    ])
-    .pipe(changed('target'))
-    .pipe(gulp.dest('target'))
-    .pipe(browserSync.stream());
-});
-
+var theme      = 'blankslate';
 
 //----------------------------------------
 // CSS
 //----------------------------------------
 
 gulp.task('styles', function () {
-  gulp.src('src/assets/scss/main.scss')
+  gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
     }))
-    .pipe(cssnano())
-    .pipe(gulp.dest('target/assets/css'))
+    .pipe(cssnano({
+      zindex: false
+    }))
+    .pipe(gulp.dest('target/wp-content/themes/' + theme + '/'))
     .pipe(browserSync.stream());
 });
 
 
 //----------------------------------------
-// Scripts
+// JS
 //----------------------------------------
 
 gulp.task('scripts', function () {
  
   // Lint
   gulp.src([
-    './src/assets/js/src/*.js',
+    './src/js/src/*.js',
   ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
@@ -84,44 +55,17 @@ gulp.task('scripts', function () {
 
   // Concat
   gulp.src([
-    './src/assets/js/lib/jquery.js',
-    './src/assets/js/lib/console.js',
-    './src/assets/js/lib/*.js',
-    './src/assets/js/src/*.js',
-    '!./src/assets/js/src/blank.js'
+    './src/js/lib/jquery.js',
+    './src/js/lib/console.js',
+    './src/js/lib/scrolloverflow.min.js',
+    './src/js/lib/*.js',
+    './src/js/src/*.js',
+    '!./src/js/src/blank.js'
   ])
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('target/assets/js'))
+    .pipe(gulp.dest('target/wp-content/themes/' + theme + '/assets/js'))
     .pipe(browserSync.stream());
-});
-
-
-//----------------------------------------
-// Images
-//----------------------------------------
-
-gulp.task('images', function () {
-  gulp.src('src/assets/images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('target/assets/images'));
-});
-
-//----------------------------------------
-// Sitemap
-//----------------------------------------
- 
-gulp.task('sitemap', function () {
-  gulp.src([
-    'src/**/*.{php,html}',
-    '!src/inc/*'
-    ], {
-      read: false
-    })
-  .pipe(sitemap({
-    siteUrl: 'http://www.' + domainName + '.com'
-  }))
-  .pipe(gulp.dest('./target'));
 });
 
 
@@ -139,17 +83,11 @@ gulp.task('watch', function () {
     // }
   });
   gulp.watch([
-    './src/**/*',
-    '!./src/assets/scss/**/*',
-    '!./src/assets/js/**/*',
-    '!./src/assets/images/**/*'
-    ], ['copyfiles']);
-  gulp.watch([
-    './target/**/*',
-    '!./target/assets/**/*'
+    './target/wp-content/themes/' + theme + '/**/*',
+    '!./target/wp-content/themes/' + theme + '/assets/**/*'
     ]).on('change', browserSync.reload);
-  gulp.watch('src/assets/scss/**/*.scss', ['styles']);
-  gulp.watch('src/assets/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
 
@@ -157,12 +95,12 @@ gulp.task('watch', function () {
 // Default Task
 //----------------------------------------
 
-gulp.task('default', ['copyfiles', 'styles', 'scripts', 'images', 'sitemap']);
+gulp.task('default', ['styles', 'scripts']);
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', ['copyfiles', 'styles', 'scripts', 'images', 'sitemap', 'watch']);
+gulp.task('dev', ['styles', 'scripts', 'watch']);
 

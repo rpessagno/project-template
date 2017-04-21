@@ -1,0 +1,42 @@
+//==============================
+// Form
+//==============================
+
+%input-reset {
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+select {
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+// placeholder and autofill
+input,
+textarea {
+  &::-webkit-input-placeholder {
+
+  }
+
+  &:-moz-placeholder {
+    
+  }
+
+  &::-moz-placeholder {
+    
+  }
+
+  &:-ms-input-placeholder {
+    
+  }
+
+  &:-webkit-autofill {
+    // -webkit-box-shadow: 0 0 0px 1000px $white inset;
+    // -webkit-text-fill-color: $white !important;
+  }
+}
