@@ -50,14 +50,11 @@ gulp.task('scripts', function () {
     './src/js/src/*.js',
   ])
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('fail'));
+    .pipe(jshint.reporter(stylish));
 
   // Concat
   gulp.src([
     './src/js/lib/jquery.js',
-    './src/js/lib/console.js',
-    './src/js/lib/scrolloverflow.min.js',
     './src/js/lib/*.js',
     './src/js/src/*.js',
     '!./src/js/src/blank.js'
@@ -70,7 +67,7 @@ gulp.task('scripts', function () {
 
 
 //----------------------------------------
-// Watch Task
+// Watch
 //----------------------------------------
 
 gulp.task('watch', function () {

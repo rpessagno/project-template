@@ -3,10 +3,8 @@ $(function() {
 
 FastClick.attach(document.body);
 
-$('.wrapper').fitVids();
-
 /*
-$('.element').waypoint(function() {
+$('.element').waypoint(function(direction) {
   //stuff
 }, {
   offset: '50%'
