@@ -1,0 +1,79 @@
+//==============================
+// Post
+//==============================
+
+.post {
+
+  &-content {
+
+    h1,
+    h2 {
+    }
+
+    h3 {
+    }
+
+    h1,
+    h2,
+    h3 {
+
+      + h1,
+      + h2,
+      + h3,
+      + p,
+      + ul,
+      + ol {
+        margin-top: .5em;
+      }
+    }
+
+    p,
+    ul,
+    ol {
+
+      + p,
+      + ul,
+      + ol {
+        margin-top: 1.5em;
+      }
+
+      + h1,
+      + h2,
+      + h3 {
+        margin-top: 2em;
+      }
+    }
+
+    ul,
+    ol {
+      margin-left: 3em;
+    }
+
+    li {
+    }
+
+    img {
+      display: block;
+      margin: 1.5em 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    blockquote {
+      margin: 3em;
+      padding: 0;
+
+      @include bp(s) {
+        margin: 1.5em 1em;
+      }
+
+      p {
+      }
+    }
+
+    a {
+      color: currentColor;
+      text-decoration: underline;
+    }
+  }
+}

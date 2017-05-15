@@ -79,10 +79,8 @@ gulp.task('watch', function () {
     //   baseDir: 'target'
     // }
   });
-  gulp.watch([
-    './target/wp-content/themes/' + theme + '/**/*',
-    '!./target/wp-content/themes/' + theme + '/assets/**/*'
-    ]).on('change', browserSync.reload);
+  gulp.watch('./target/wp-content/themes/' + theme + '/**/*')
+    .on('change', browserSync.reload);
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/js/**/*.js', ['scripts']);
 });
