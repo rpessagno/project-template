@@ -38,3 +38,26 @@
     font-style: $style;
   }
 }
+
+@mixin placeholder($autofill-bg, $autofill-color) {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $autofill-bg inset;
+    -webkit-text-fill-color: $autofill-color !important;
+  }
+}

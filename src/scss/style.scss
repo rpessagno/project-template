@@ -1,4 +1,3 @@
-
 /*!
 Theme Name: Project Template
 Author: Robert Pessagno
@@ -14,8 +13,8 @@ Version: 1.0
 //------------------------------
 
 @import 'global/mixins';
-@import 'global/variables';
 @import 'global/fonts';
+@import 'global/variables';
 @import 'global/normalize';
 @import 'global/base';
 @import 'global/placeholders';
@@ -24,10 +23,14 @@ Version: 1.0
 // Components
 //------------------------------
 
+@import 'components/typography';
+@import 'components/forms';
+
 
 // Libraries
 //------------------------------
 
+@import 'lib/slick';
 
 
 // Modules
@@ -35,13 +38,13 @@ Version: 1.0
 
 @import 'modules/header';
 @import 'modules/footer';
-@import 'modules/forms';
 
 
 // Templates
 //------------------------------
 
 @import 'templates/post';
+@import 'templates/not-found';
 
 // Print
 //------------------------------

@@ -1,5 +1,6 @@
-$(function() {
-// Begin Document Ready
+//==============================
+// Global
+//==============================
 
 FastClick.attach(document.body);
 
@@ -11,5 +12,3 @@ $('.element').waypoint(function(direction) {
 });
 */
 
-// End Document Ready
-});
