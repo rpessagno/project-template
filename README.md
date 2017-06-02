@@ -1,37 +1,34 @@
-#Project Template
+# Project Template
 
-A starter template for my workflow, consisting of Gulp, Browsersync, Sass, PHP, jQuery, and more.
+A starter template for my workflow, consisting primarily of WordPress, Gulp, Browsersync, Sass, and jQuery.
 
-Things I use as part of this workflow:
-
+- [WordPress](https://wordpress.org/)
 - [Node.js](https://nodejs.org/) (5.6.0)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
-- [npm](https://docs.npmjs.com/getting-started/installing-node) (3.8.3)
-- [Sass](http://sass-lang.com/install) (3.4.13)
+- [npm](https://docs.npmjs.com/getting-started/installing-node)
+- [Sass](http://sass-lang.com/install)
 - [MAMP](https://www.mamp.info/en/downloads/)
 - [GitHub Desktop](https://desktop.github.com/)
 - [SublimeText](http://www.sublimetext.com/3) / [Package Control](https://packagecontrol.io/installation)
-- [jQuery](http://jquery.com/) + Plugins
-  - [FastClick](https://github.com/ftlabs/fastclick)
-  - [FitVids.js](https://github.com/davatron5000/FitVids.js)
-  - [Waypoints](http://imakewebthings.com/waypoints/) (2.0.5)
+- [jQuery](http://jquery.com/)
+- [FastClick](https://github.com/ftlabs/fastclick)
+- [Waypoints](http://imakewebthings.com/waypoints/) (2.0.5)
+- [Slick](http://kenwheeler.github.io/slick/)
 
-##Setup
+## Setup
 
-###SublimeText
+### SublimeText
 
 Packages:
 
 - Emmet
-- jQuery
-- jQuery Snippets pack
 - JSLint
 - SublimeLinter
 - SCSS
 - SublimeLinter-contrib-scss-lint
 - SublimeLinter-contrib-eslint
-- One Dark Material
+- One Dark Material - Theme
 
 User Settings:
 
@@ -47,21 +44,11 @@ User Settings:
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "word_wrap": true,
-  "wrap_width": 120
+  "wrap_width": 180
 }
 ```
 
-###MAMP
-
-I use MAMP mainly to work on projects using PHP or WordPress, but it also allows me to create virtual hosts so I can view my projects at local URLs, such **local.[domain].com**. Browsersync will still open the current project at **localhost:3000**, however.
-
-To create a virtual host, first add an entry to your hosts file:
-
-> /private/etc/hosts
-
-```
-127.0.0.1     local.[domain].com
-```
+### MAMP
 
 Allow MAMP to use virtual hosts by opening the following file:
 
@@ -72,6 +59,14 @@ And remove the comment on the line under `# Virtual hosts` to look like this:
 ```
 # Virtual hosts
 Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+```
+
+To create a virtual host, add an entry to your hosts file:
+
+> /private/etc/hosts
+
+```
+127.0.0.1     local.[domain].com
 ```
 
 Then point to where your files are located in:
@@ -91,29 +86,16 @@ Make sure MAMP settings look like this:
 - Nginx Port: 8080
 - MySQL Port: 3306
 
-###Without MAMP
 
-If your project doesn't require MAMP, comment out the following line in **gulpfile.js**:
-```
-proxy: 'local.' + domainName + '.com'
-```
-and uncomment these lines:
-```
-// server: {
-//   baseDir: 'target'
-// }
-```
-
-###New Project
+### New Project
 
 - Download, unzip, and rename the project-template folder
-- In **package.json**, edit the `name`, `version`, `repository url`, and `license`
-- In **gulpfile.js**, change the `domainName` value to your domain name
+- In **package.json**, edit the `name` and `version`
+- In **gulpfile.js**, edit the `domainName` and `theme` variables
 - Run `npm install`
 
-##Build
+## Build
 
 - Launch MAMP
 - Run `gulp dev` to build the project
-- `gulp clean` can be used to delete target folder
 

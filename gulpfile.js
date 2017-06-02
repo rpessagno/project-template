@@ -24,7 +24,7 @@ var
 //----------------------------------------
 
 var domainName = 'project-template';
-var theme      = 'blankslate';
+var theme      = 'project-template';
 
 //----------------------------------------
 // CSS
