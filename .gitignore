@@ -5,8 +5,8 @@
 /target/wp-content/*
 !/target/wp-content/themes
 /target/wp-content/themes/*
-!/target/wp-content/themes/blankslate
-/target/wp-content/themes/blankslate/**/.DS_Store
+!/target/wp-content/themes/project-template
+/target/wp-content/themes/project-template/**/.DS_Store
 
 wp-config-staging.php
 wp-config-live.php
