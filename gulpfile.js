@@ -1,4 +1,4 @@
-//========================================
+ //========================================
 // Gulpfile
 //========================================
 
@@ -61,7 +61,8 @@ gulp.task('scripts', function () {
   gulp.src([
     './src/js/lib/jquery.js',
     './src/js/lib/*.js',
-    './src/js/src/*.js'
+    './src/js/src/*.js',
+    '!./src/js/src/blank.js'
   ])
     .pipe(concat('main.js'))
     .pipe(uglify())

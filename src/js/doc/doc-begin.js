@@ -1,2 +1,0 @@
-$(function() {
-// Begin Document Ready
