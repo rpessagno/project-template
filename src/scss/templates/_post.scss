@@ -46,10 +46,14 @@
 
     ul,
     ol {
-      margin-left: 3em;
+      margin-left: 2em;
     }
 
     li {
+
+      + li {
+        margin-top: .25em;
+      }
     }
 
     img {

@@ -30,10 +30,10 @@
   }}
 
 // Font declaration
-@mixin font($font, $folder, $file, $weight, $style) {
+@mixin font($font, $folder, $file, $weight, $style, $ext) {
   @font-face {
     font-family: '#{$font}';
-    src: url('assets/fonts/#{$folder}/#{$file}.woff') format('woff');
+    src: url('assets/fonts/#{$folder}/#{$file}.#{$ext}');
     font-weight: $weight;
     font-style: $style;
   }
