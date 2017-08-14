@@ -61,3 +61,18 @@
     -webkit-text-fill-color: $autofill-color !important;
   }
 }
+
+@mixin fillcontainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
