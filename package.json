@@ -2,15 +2,15 @@
   "name": "project-template",
   "version": "1.0.0",
   "devDependencies": {
-    "browser-sync": "2.12.5",
+    "browser-sync": "2.18.13",
     "gulp": "3.9.1",
-    "gulp-autoprefixer": "3.1.1",
+    "gulp-autoprefixer": "4.0.0",
     "gulp-concat": "2.6.1",
     "gulp-cssnano": "2.1.2",
     "gulp-jshint": "2.0.4",
     "gulp-sass": "3.1.0",
-    "gulp-uglify": "2.0.1",
-    "jshint": "2.9.4",
+    "gulp-uglify": "3.0.0",
+    "jshint": "2.9.5",
     "jshint-stylish": "2.2.1"
   }
 }
