@@ -76,3 +76,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin square {
+
+  &:before {
+    content: ''; 
+    padding-top: 100%;
+    display: table;
+  }
+}
