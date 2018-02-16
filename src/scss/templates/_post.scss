@@ -75,7 +75,7 @@
       }
     }
 
-    a {
+    a:not(.button) {
       color: currentColor;
       text-decoration: underline;
     }
