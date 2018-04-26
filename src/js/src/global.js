@@ -2,8 +2,6 @@
 // Global
 //==============================
 
-$=jQuery.noConflict();
-
 FastClick.attach(document.body);
 
 /*

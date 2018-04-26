@@ -5,29 +5,36 @@
 // Breakpoints
 @mixin bp($bp) {
   @if $bp == xxl {
-    @media only screen and (min-width: 1501px) { @content; }
+    @media screen and (min-width: 1501px) { @content; }
   }
   @if $bp == xl {
-    @media only screen and (max-width: 1500px) { @content; }
+    @media screen and (max-width: 1500px) { @content; }
   }
-  @else if $bp == l {
-    @media only screen and (max-width: 1200px) { @content; }
+  @if $bp == l {
+    @media screen and (max-width: 1200px) { @content; }
   }
-  @else if $bp == m {
-    @media only screen and (max-width: 1023px) { @content; }
+  @if $bp == m {
+    @media screen and (max-width: 1023px) { @content; }
   }
-  @else if $bp == s {
-    @media only screen and (max-width: 767px) { @content; }
+  @if $bp == s {
+    @media screen and (max-width: 767px) { @content; }
   }
-  @else if $bp == xs {
-    @media only screen and (max-width: 480px) { @content; }
+  @if $bp == xs {
+    @media screen and (max-width: 480px) { @content; }
   }
-  @else if $bp == xxs {
-    @media only screen and (max-width: 340px) { @content; }
+  @if $bp == xxs {
+    @media screen and (max-width: 340px) { @content; }
   }
-  @else if $bp == retina {
+  @if $bp == landscape {
+    @media screen and (orientation:landscape) { @content; }
+  }
+  @if $bp == portrait {
+    @media screen and (orientation:portrait) { @content; }
+  }
+  @if $bp == retina {
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
-  }}
+  }
+}
 
 // Font declaration
 @mixin font($font, $folder, $file, $weight, $style, $ext) {
@@ -85,3 +92,10 @@
     display: table;
   }
 }
+
+@mixin bg-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
