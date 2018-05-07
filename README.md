@@ -3,7 +3,7 @@
 A starter template for my workflow, consisting primarily of WordPress, Gulp, Browsersync, Sass, and jQuery.
 
 - [WordPress](https://wordpress.org/)
-- [Node.js](https://nodejs.org/) (5.6.0)
+- [Node.js](https://nodejs.org/)
 - [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
 - [Homebrew](http://brew.sh/)
 - [npm](https://docs.npmjs.com/getting-started/installing-node)
@@ -13,7 +13,7 @@ A starter template for my workflow, consisting primarily of WordPress, Gulp, Bro
 - [SublimeText](http://www.sublimetext.com/3) / [Package Control](https://packagecontrol.io/installation)
 - [jQuery](http://jquery.com/)
 - [FastClick](https://github.com/ftlabs/fastclick)
-- [Waypoints](http://imakewebthings.com/waypoints/) (2.0.5)
+- [Waypoints](http://imakewebthings.com/waypoints/)
 - [Slick](http://kenwheeler.github.io/slick/)
 
 ## Setup
@@ -28,13 +28,13 @@ Packages:
 - SCSS
 - SublimeLinter-contrib-scss-lint
 - SublimeLinter-contrib-eslint
-- One Dark Material - Theme
+- One Dark Color Scheme
 
 User Settings:
 
 ```
 {
-  "color_scheme": "Packages/User/SublimeLinter/OneDark (SL).tmTheme",
+  "color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
   "font_size": 12,
   "ignored_packages":
   [
