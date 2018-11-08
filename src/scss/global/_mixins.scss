@@ -37,7 +37,7 @@
 }
 
 // Font declaration
-@mixin font($font, $file, $weight, $style, $ext) {
+@mixin font($font, $file, $weight, $style) {
   @font-face {
     font-family: '#{$font}';
     src: url('assets/fonts/#{$file}');
