@@ -93,6 +93,14 @@
   }
 }
 
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin bg-cover {
   background-position: center center;
   background-repeat: no-repeat;
