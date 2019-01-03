@@ -13,3 +13,5 @@ $('.element').waypoint(function(direction) {
   offset: '50%'
 });
 */
+
+// $('.thing-with-videos').fitVids();

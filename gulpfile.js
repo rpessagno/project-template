@@ -7,16 +7,15 @@
 // Plugins
 //----------------------------------------
 
-var
-  gulp          = require('gulp'),
-  sass          = require('gulp-sass'),
-  autoprefixer  = require('gulp-autoprefixer'),
-  cssnano       = require('gulp-cssnano'),
-  jshint        = require('gulp-jshint'),
-  stylish       = require('jshint-stylish'),
-  uglify        = require('gulp-uglify'),
-  concat        = require('gulp-concat'),
-  browserSync   = require('browser-sync').create();
+var gulp          = require('gulp');
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var cssnano       = require('gulp-cssnano');
+var jshint        = require('gulp-jshint');
+var stylish       = require('jshint-stylish');
+var uglify        = require('gulp-uglify');
+var concat        = require('gulp-concat');
+var browserSync   = require('browser-sync').create();
 
 
 //----------------------------------------
@@ -31,7 +30,7 @@ var theme      = 'project-template';
 //----------------------------------------
 
 gulp.task('styles', function () {
-  gulp.src('src/scss/style.scss')
+  return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 5 versions']
@@ -51,14 +50,14 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
  
   // Lint
-  gulp.src([
+  return gulp.src([
     './src/js/src/*.js',
   ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 
   // Concat
-  gulp.src([
+  return gulp.src([
     './src/js/lib/jquery.js',
     './src/js/lib/*.js',
     './src/js/src/global.js',
@@ -75,7 +74,7 @@ gulp.task('scripts', function () {
 // Watch
 //----------------------------------------
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   browserSync.init({
     // MAMP
     proxy: 'local.' + domainName + '.com'
@@ -86,20 +85,20 @@ gulp.task('watch', function () {
   });
   gulp.watch('./target/wp-content/themes/' + theme + '/**/*')
     .on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', ['styles']);
-  gulp.watch('src/js/**/*.js', ['scripts']);
-});
+  gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
+  gulp.watch('src/js/**/*.js', gulp.parallel('scripts'));
+})
 
 
 //----------------------------------------
 // Default Task
 //----------------------------------------
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', gulp.parallel('styles', 'scripts'));
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', ['styles', 'scripts', 'watch']);
+gulp.task('dev', gulp.parallel('styles', 'scripts', 'watch'));
