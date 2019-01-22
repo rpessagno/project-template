@@ -47,16 +47,8 @@ gulp.task('styles', function () {
 // JS
 //----------------------------------------
 
+// Concat
 gulp.task('scripts', function () {
- 
-  // Lint
-  return gulp.src([
-    './src/js/src/*.js',
-  ])
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-
-  // Concat
   return gulp.src([
     './src/js/lib/jquery.js',
     './src/js/lib/*.js',
@@ -69,6 +61,14 @@ gulp.task('scripts', function () {
     .pipe(browserSync.stream());
 });
 
+// Lint
+gulp.task('scripts-lint', function () {
+  return gulp.src([
+    './src/js/src/*.js',
+  ])
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish));
+});
 
 //----------------------------------------
 // Watch
@@ -86,7 +86,7 @@ gulp.task('watch', function() {
   gulp.watch('./target/wp-content/themes/' + theme + '/**/*')
     .on('change', browserSync.reload);
   gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
-  gulp.watch('src/js/**/*.js', gulp.parallel('scripts'));
+  gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
 })
 
 
@@ -94,11 +94,11 @@ gulp.task('watch', function() {
 // Default Task
 //----------------------------------------
 
-gulp.task('default', gulp.parallel('styles', 'scripts'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'scripts-lint'));
 
 
 //----------------------------------------
 // Dev Task
 //----------------------------------------
 
-gulp.task('dev', gulp.parallel('styles', 'scripts', 'watch'));
+gulp.task('dev', gulp.parallel('styles', 'scripts', 'scripts-lint', 'watch'));
