@@ -87,7 +87,7 @@ gulp.task('watch', function() {
     .on('change', browserSync.reload);
   gulp.watch('src/scss/**/*.scss', gulp.parallel('styles'));
   gulp.watch('src/js/**/*.js', gulp.parallel('scripts', 'scripts-lint'));
-})
+});
 
 
 //----------------------------------------
