@@ -1,6 +1,6 @@
 {
   "name": "project-template",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "devDependencies": {
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
@@ -9,7 +9,7 @@
     "gulp-jshint": "2.1.0",
     "gulp-sass": "4.0.2",
     "gulp-uglify": "3.0.2",
-    "jshint": "2.10.1",
+    "jshint": "2.10.2",
     "jshint-stylish": "2.2.1",
     "browser-sync": "2.26.3"
   }
