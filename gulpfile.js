@@ -32,9 +32,7 @@ var theme      = 'project-template';
 gulp.task('styles', function () {
   return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 5 versions']
-    }))
+    .pipe(autoprefixer())
     .pipe(cssnano({
       zindex: false
     }))
