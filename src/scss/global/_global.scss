@@ -59,3 +59,7 @@ a {
     outline: none;
   }
 }
+
+[tabindex="0"] {
+  outline: 0;
+}
