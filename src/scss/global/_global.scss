@@ -48,18 +48,6 @@ textarea {
   resize: vertical;
 }
 
-a {
-  outline: none;
-
-  &:link,
-  &:visited,
-  &:focus,
-  &:hover,
-  &:active {
-    outline: none;
-  }
-}
-
 [tabindex="0"] {
   outline: 0;
 }
