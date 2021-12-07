@@ -11,38 +11,29 @@ Version: 1.0
 
 // Global
 //------------------------------
-
 @import 'global/mixins';
 @import 'global/fonts';
 @import 'global/variables';
 @import 'global/normalize';
 @import 'global/global';
-
-
-// Components
-//------------------------------
-
-@import 'components/typography';
-@import 'components/forms';
-@import 'components/buttons';
+@import 'global/typography';
 
 
 // Libraries
 //------------------------------
-
 @import 'lib/slick';
 
 
-// Modules
+// Components
 //------------------------------
-
-@import 'modules/header';
-@import 'modules/footer';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
 
 
 // Templates
 //------------------------------
-
 @import 'templates/home';
 @import 'templates/post';
 @import 'templates/not-found';

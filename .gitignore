@@ -8,8 +8,5 @@
 !/target/wp-content/themes/project-template
 /target/wp-content/themes/project-template/**/.DS_Store
 
-wp-config-staging.php
-wp-config-live.php
-
 node_modules
 package-lock.json
