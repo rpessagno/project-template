@@ -2,7 +2,7 @@
   "name": "project-template",
   "version": "1.0.0",
   "devDependencies": {
-    "sass": "1.54.3",
+    "sass": "1.64.2",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-concat": "2.6.1",
@@ -10,8 +10,8 @@
     "gulp-jshint": "2.1.0",
     "gulp-sass": "5.1.0",
     "gulp-uglify": "3.0.2",
-    "jshint": "2.13.5",
+    "jshint": "2.13.6",
     "jshint-stylish": "2.2.1",
-    "browser-sync": "2.27.10"
+    "browser-sync": "2.29.3"
   }
 }
