@@ -1,6 +1,6 @@
 # Project Template
 
-A starter template for my workflow, consisting primarily of WordPress, Gulp, Browsersync, Sass, and jQuery.
+A starter template for my workflow.
 
 - [WordPress](https://wordpress.org/)
 - [Node.js](https://nodejs.org/)
@@ -97,5 +97,5 @@ Make sure MAMP settings look like this:
 ## Build
 
 - Launch MAMP
-- Run `gulp dev` to build the project
+- Run `gulp` to build the project
 
